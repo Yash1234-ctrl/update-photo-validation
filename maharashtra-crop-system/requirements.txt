@@ -1,0 +1,12 @@
+﻿streamlit
+pymongo
+python-dotenv
+pillow
+numpy
+matplotlib
+opencv-python
+pandas
+requests
+plotly
+# TensorFlow (CPU) - pinned to a known stable release for Streamlit Cloud
+tensorflow-cpu==2.13.0

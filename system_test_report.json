@@ -1,0 +1,115 @@
+{
+  "test_summary": {
+    "total_tests": 24,
+    "passed_tests": 21,
+    "success_rate": 87.5,
+    "timestamp": "2026-02-25T14:31:57.646947"
+  },
+  "test_details": {
+    "CSV file: agriculture_dataset.csv": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:30.669764"
+    },
+    "CSV file: Crop and fertilizer dataset.csv": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:30.670361"
+    },
+    "CSV file: Crop_recommendationV2.csv": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:30.670361"
+    },
+    "CSV file: weather_data.csv": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:30.670361"
+    },
+    "CSV file: Fertilizer Prediction.csv": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:30.670361"
+    },
+    "CSV file: Fertilizer.csv": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:30.670361"
+    },
+    "Enhanced file: enhanced_data_processor.py": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:30.670361"
+    },
+    "Enhanced file: enhanced_backend_api.py": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:30.670866"
+    },
+    "Agriculture dataset structure": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:34.942013"
+    },
+    "Agriculture dataset quality": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:34.957014"
+    },
+    "Crop-fertilizer dataset structure": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:34.982375"
+    },
+    "Weather dataset structure": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:34.988368"
+    },
+    "Dataset loading in processor": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:41.999761"
+    },
+    "Integrated feature creation": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:42.056811"
+    },
+    "Enhanced crop features": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:42.056811"
+    },
+    "Weather pattern extraction": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:42.057811"
+    },
+    "Model training": {
+      "status": false,
+      "details": "Input y contains NaN.",
+      "timestamp": "2026-02-25T14:31:43.400984"
+    },
+    "Database creation": {
+      "status": false,
+      "details": "Input y contains NaN.",
+      "timestamp": "2026-02-25T14:31:44.623066"
+    },
+    "Chatbot model attribute present": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:52.508468"
+    },
+    "Chatbot model object valid": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:52.508468"
+    },
+    "Integration: Data loading + Feature creation": {
+      "status": true,
+      "details": "",
+      "timestamp": "2026-02-25T14:31:56.881604"
+    },
+    "Integration: Data consistency": {
+      "status": 

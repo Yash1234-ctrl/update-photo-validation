@@ -1,0 +1,93 @@
+﻿# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+krushi_env/
+GC2/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Model artifacts — recommended to exclude large model files from GitHub
+# Use Git LFS or external storage for models. Uncommenting excludes them.
+*.h5
+saved_model/
+
+# Archives / backups / temp
+*.zip
+*.bak
+*~
+training_history.png
+firebase-debug.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+*.iml
+
+# Project-specific (keep CSV out of git if large)
+agriculture_dataset.csv
+archive/
+dataset/
+serviceAccountKey.json
+
+# Ignore virtual environment and heavy folders
+venv/
+__pycache__/
+Lib/
+
+# Ignore large/binary files
+*.dll
+*.pyd
+*.pkl
+*.zip
+*.csv
+*.h5
+
+# Ignore TensorFlow build files
+*.pb
+*.so
+# Ignore virtual environment and heavy folders
+venv/
+__pycache__/
+Lib/
+
+# Ignore large/binary files
+*.dll
+*.pyd
+*.pkl
+*.zip
+*.csv
+*.h5
+
+# Ignore TensorFlow build files
+*.pb
+*.so
