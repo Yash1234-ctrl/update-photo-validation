@@ -2,6 +2,6 @@ services:
   - type: web
     name: mahaagro-app
     env: python
-    pythonVersion: 3.12
+    pythonVersion: 3.11
     buildCommand: "pip install -r requirements.txt"
     startCommand: "streamlit run maharashtra_crop_system.py --server.port $PORT --server.address 0.0.0.0"
