@@ -30,6 +30,14 @@ from mongodb_auth import MongoFarmerAuth
 from enhanced_pest_data import PEST_DATABASE
 from scheduler import init_scheduler, get_scheduler
 
+# === PAGE CONFIG MUST BE FIRST STREAMLIT COMMAND ===
+st.set_page_config(
+    page_title="MahaAgroAI",
+    page_icon="🌾",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
 # Logging setup
 import logging
 
@@ -231,15 +239,6 @@ def apply_dark_theme(fig: go.Figure) -> go.Figure:
     except Exception as e:
         logger.error(f"Error applying dark theme: {e}")
         return fig
-
-
-# Page configuration
-st.set_page_config(
-    page_title="MahaAgroAI",
-    page_icon="🌾",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
 
 # Modern Agricultural Theme with Enhanced Color Scheme
 st.markdown(
