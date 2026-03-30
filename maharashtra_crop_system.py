@@ -240,6 +240,7 @@ def apply_dark_theme(fig: go.Figure) -> go.Figure:
         logger.error(f"Error applying dark theme: {e}")
         return fig
 
+
 # Modern Agricultural Theme with Enhanced Color Scheme
 st.markdown(
     """
@@ -7809,57 +7810,57 @@ def main():
             else:
                 st.info("Run soil analysis to see fertilizer costs")
 
+    # --- Professional Chatbot Integration in Sidebar ---
+    import openrouter_chat
+
+    with st.sidebar:
+        st.markdown("---")
+        st.markdown(
+            "<div style='text-align:center;'><b>🤖 MahaAgroAI Chat Assistant</b></div>",
+            unsafe_allow_html=True,
+        )
+        if "chat_history" not in st.session_state:
+            st.session_state["chat_history"] = []
+        user_input = st.text_area(
+            "Ask MahaAgroAI (English only):", "", key="chatbot_input", height=60
+        )
+        if st.button("Send", key="chatbot_send_btn"):
+            if user_input.strip():
+                with st.spinner("MahaAgroAI is typing..."):
+                    reply = openrouter_chat.chat_with_openrouter(
+                        user_input, st.session_state["chat_history"]
+                    )
+                # if something went wrong the module returns a string
+                # starting with "Error:"; show that to the user instead of
+                # adding it to the normal history.
+                if reply.startswith("Error:"):
+                    st.error(reply)
+                else:
+                    st.session_state["chat_history"].append(
+                        {"role": "user", "content": user_input}
+                    )
+                    st.session_state["chat_history"].append(
+                        {"role": "assistant", "content": reply}
+                    )
+        # Display chat history
+        if st.session_state["chat_history"]:
+            st.markdown(
+                "<div style='max-height:250px;overflow-y:auto;background:#f8f9fa;padding:10px;border-radius:8px;margin-top:10px;'>",
+                unsafe_allow_html=True,
+            )
+            for msg in st.session_state["chat_history"][-8:]:
+                if msg["role"] == "user":
+                    st.markdown(
+                        f"<div style='color:#1976d2;'><b>You:</b> {msg['content']}</div>",
+                        unsafe_allow_html=True,
+                    )
+                else:
+                    st.markdown(
+                        f"<div style='color:#388e3c;'><b>MahaAgroAI:</b> {msg['content']}</div>",
+                        unsafe_allow_html=True,
+                    )
+            st.markdown("</div>", unsafe_allow_html=True)
+
 
 if __name__ == "__main__":
     main()
-
-# --- Professional Chatbot Integration in Sidebar ---
-import openrouter_chat
-
-with st.sidebar:
-    st.markdown("---")
-    st.markdown(
-        "<div style='text-align:center;'><b>🤖 MahaAgroAI Chat Assistant</b></div>",
-        unsafe_allow_html=True,
-    )
-    if "chat_history" not in st.session_state:
-        st.session_state["chat_history"] = []
-    user_input = st.text_area(
-        "Ask MahaAgroAI (English only):", "", key="chatbot_input", height=60
-    )
-    if st.button("Send", key="chatbot_send_btn"):
-        if user_input.strip():
-            with st.spinner("MahaAgroAI is typing..."):
-                reply = openrouter_chat.chat_with_openrouter(
-                    user_input, st.session_state["chat_history"]
-                )
-            # if something went wrong the module returns a string
-            # starting with "Error:"; show that to the user instead of
-            # adding it to the normal history.
-            if reply.startswith("Error:"):
-                st.error(reply)
-            else:
-                st.session_state["chat_history"].append(
-                    {"role": "user", "content": user_input}
-                )
-                st.session_state["chat_history"].append(
-                    {"role": "assistant", "content": reply}
-                )
-    # Display chat history
-    if st.session_state["chat_history"]:
-        st.markdown(
-            "<div style='max-height:250px;overflow-y:auto;background:#f8f9fa;padding:10px;border-radius:8px;margin-top:10px;'>",
-            unsafe_allow_html=True,
-        )
-        for msg in st.session_state["chat_history"][-8:]:
-            if msg["role"] == "user":
-                st.markdown(
-                    f"<div style='color:#1976d2;'><b>You:</b> {msg['content']}</div>",
-                    unsafe_allow_html=True,
-                )
-            else:
-                st.markdown(
-                    f"<div style='color:#388e3c;'><b>MahaAgroAI:</b> {msg['content']}</div>",
-                    unsafe_allow_html=True,
-                )
-        st.markdown("</div>", unsafe_allow_html=True)
